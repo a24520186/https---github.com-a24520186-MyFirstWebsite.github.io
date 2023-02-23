@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: rgba(206, 201, 193, 0.932);
+
+  div.logo {
+    align-items: center;
+    flex: 5 1 400px;
+    margin-left: 2rem;
+  }
+  img {
+    width: 6vw;
+    height: 6vw;
+  }
+  nav {
+    flex: 2 1 400px;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: space-around;
+      li {
+        a {
+          color: #8b7e58;
+          text-decoration: none;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  section.backImage {
+    min-height: 45vh;
+    width: 100%;
+    background-image: url(../img/bj31-vegetable.png);
+    background-size: contain;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      color: white;
+      margin: 2rem 0rem;
+    }
+
+    button.start {
+      background-color: rgb(77, 110, 22);
+      padding: 0.75rem 1.5rem;
+      font-size: 1.5rem;
+      color: white;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+    }
+
+    div.filter {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+div.card {
+  display: flex;
+  align-items: center;
+}
+img {
+  margin: auto;
+  padding: 0rem 1rem;
+}
+
+section.second {
+  h2 {
+    font-size: 2rem;
+    margin: 6rem 2rem;
+    text-align: center;
+  }
+}
+
+//頁尾金魚
+.main-fotter {
+  padding: 100px 0 0 0;
+  background-color: rgba(243, 243, 243, 0.979);
+}
+
+.main-fotter .container {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+}
+
+.fotter-item {
+  width: 0;
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.fotter-item h4 {
+  font-size: 20px;
+  color: green;
+}
+
+.fotter-item nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.fotter-item nav a {
+  color: black;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.fotter-item nav a:hover {
+  color: rgb(153, 152, 152);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin: 150px 0 0;
+  padding: 10px 0px;
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    main {
+      section.backImage {
+        // min-height: 45vh;
+        max-width: 100%;
+        background-image: url(../img/bj31-vegetable.png);
+        // background-size: contain;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      section.second {
+        section.cards {
+          div.card {
+            img {
+              max-width: 100%;
+              background-repeat: no-repeat;
+              position: relative;
+            }
+          }
+        }
+      }
+      nav {
+        ul {
+          flex-direction: column;
+          li {
+            padding: 0.5rem 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  div.main-fotter {
+    background-color: rgb(187, 221, 204);
+    width: auto;
+    display: flex;
+
+    padding: 2rem 1rem;
+  }
+  div.copyright {
+    display: none;
+  }
+  div.container {
+    div.fotter-item {
+      flex-direction: column;
+
+      //   display: flex;
+      //   display: none;
+    }
+    nav {
+      a {
+        padding: 0.2rem 0.1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(206, 201, 193, 0.932);
+    div.logo {
+      margin-left: 0.5rem;
+
+      img {
+        width: 25vw;
+        height: 25vw;
+        display: flex; //圖像置中
+        align-items: center; //圖像置中
+      }
+    }
+    nav {
+      ul {
+        padding: 1rem 1rem;
+      }
+    }
+  }
+}
